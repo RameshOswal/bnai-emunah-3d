@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This report documents five different approaches used to generate and visualize a 3D massing model of the B'nai Emunah Synagogue in Tulsa, Oklahoma. The project utilized OpenStreetMap data and various tools to create accurate architectural representations for preservation purposes.
+This report documents five different approaches used to generate and visualize a 3D massing model of the B'nai Emunah Synagogue in Tulsa, Oklahoma. The project utilized OpenStreetMap data and various tools to create accurate architectural representations for preservation purposes. **The Blender GIS approach produced the most polished and professional output.**
 
 ---
 
@@ -33,10 +33,44 @@ This report documents five different approaches used to generate and visualize a
 
 ---
 
-## Approach 1: Python Script with Bevel and Smoothing
+## Approach 1: Blender with GIS Addon ⭐ BEST OUTPUT
+
+### Method
+Import and visualization using Blender's GIS (Geographic Information System) addon.
+
+![Blender GIS Output](output/blender.png)
+
+### Technical Details
+- **Software:** Blender (version with BlenderGIS addon)
+- **Addon:** BlenderGIS / OSM importer
+- **Data Source:** OpenStreetMap direct import
+
+### Features
+- Native OSM data import
+- Automatic georeferencing
+- Real-world scale accuracy
+- Professional rendering capabilities
+- Material and lighting setup
+
+### Results
+- **Status:** ✅ Best Output
+- **Quality:** Highest visual fidelity
+- **Notes:** This approach produced the most polished and professional-looking output with proper materials, lighting, and rendering quality.
+
+### Why This is Best
+- Professional-grade visualization suitable for presentations
+- Proper materials, textures, and lighting
+- Full control over camera angles and rendering settings
+- Highest quality output for stakeholder reviews and documentation
+
+---
+
+## Approach 2: Python Script with Bevel and Smoothing
 
 ### Method
 Custom Python script ([bnai_emunah_massing.py](bnai_emunah_massing.py)) that generates a 3D OBJ file from Overpass API JSON data.
+
+![Python Script Output](output/python-script.png)
 
 ### Technical Details
 - **Script Language:** Python 3
@@ -79,32 +113,7 @@ elif 'building:levels' in tags:
 ### Results
 - **Status:** ✅ Successful
 - **Files Generated:** `bnai_emunah_massing.obj`
-- **Image:** [Attached - Python output with beveling]
-
----
-
-## Approach 2: Blender with GIS Addon
-
-### Method
-Import and visualization using Blender's GIS (Geographic Information System) addon.
-
-### Technical Details
-- **Software:** Blender (version with BlenderGIS addon)
-- **Addon:** BlenderGIS / OSM importer
-- **Data Source:** OpenStreetMap direct import
-
-### Features
-- Native OSM data import
-- Automatic georeferencing
-- Real-world scale accuracy
-- Professional rendering capabilities
-- Material and lighting setup
-
-### Results
-- **Status:** ✅ Best Output
-- **Quality:** Highest visual fidelity
-- **Image:** [Attached - Blender GIS render]
-- **Notes:** This approach produced the most polished and professional-looking output with proper materials, lighting, and rendering quality.
+- **Use Case:** Most flexible approach for integration into automated pipelines and CAD workflows
 
 ---
 
@@ -112,6 +121,8 @@ Import and visualization using Blender's GIS (Geographic Information System) add
 
 ### Method
 Direct visualization using OpenStreetMap's web interface.
+
+![OpenStreetMap View](output/openstreet.png)
 
 ### Access
 **URL:** [https://www.openstreetmap.org/way/251539920#map=19/36.137431/-95.976485&layers=P](https://www.openstreetmap.org/way/251539920#map=19/36.137431/-95.976485&layers=P)
@@ -131,7 +142,6 @@ Direct visualization using OpenStreetMap's web interface.
 ### Results
 - **Status:** ✅ Successful
 - **View Type:** 2D orthographic
-- **Image:** [Attached - OpenStreetMap screenshot]
 - **Use Case:** Best for verifying footprint accuracy and spatial context
 
 ---
@@ -140,6 +150,8 @@ Direct visualization using OpenStreetMap's web interface.
 
 ### Method
 Google Maps satellite imagery and 3D view.
+
+![Google Maps View](output/googlemaps.png)
 
 ### Access
 **URL:** [Google Maps Link](https://www.google.com/maps/place/The+Synagogue+%7C+Congregation+B'nai+Emunah/@36.1374021,-95.9766479,152m/data=!3m1!1e3!4m14!1m7!3m6!1s0x87b6ec98ec66f64d:0xa566155ef6176f09!2sThe+Synagogue+%7C+Congregation+B'nai+Emunah!8m2!3d36.1376435!4d-95.9764804!16s%2Fg%2F1tfqg9r6!3m5!1s0x87b6ec98ec66f64d:0xa566155ef6176f09!8m2!3d36.1376435!4d-95.9764804!16s%2Fg%2F1tfqg9r6?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D)
@@ -160,7 +172,6 @@ Google Maps satellite imagery and 3D view.
 ### Results
 - **Status:** ✅ Successful
 - **View Types:** Satellite, 3D, Street View
-- **Image:** [Attached - Google Maps screenshot]
 - **Use Case:** Best for real-world reference imagery and roof details
 
 ---
@@ -169,6 +180,8 @@ Google Maps satellite imagery and 3D view.
 
 ### Method
 Interactive 3D visualization using F4Map's OpenStreetMap-based renderer.
+
+![F4Map View](output/f4map.png)
 
 ### Access
 **URL:** [https://demo.f4map.com/#lat=36.1374515&lon=-95.9762206&zoom=19&camera.theta=64.996&camera.phi=-29.507](https://demo.f4map.com/#lat=36.1374515&lon=-95.9762206&zoom=19&camera.theta=64.996&camera.phi=-29.507)
@@ -191,7 +204,6 @@ Interactive 3D visualization using F4Map's OpenStreetMap-based renderer.
 ### Results
 - **Status:** ✅ Successful
 - **View Type:** Interactive 3D perspective
-- **Image:** [Attached - F4Map screenshot]
 - **Use Case:** Best for interactive exploration and urban context visualization
 
 ---
@@ -200,8 +212,8 @@ Interactive 3D visualization using F4Map's OpenStreetMap-based renderer.
 
 | Approach | Type | Quality | Interactivity | Context | Accuracy | Best For |
 |----------|------|---------|---------------|---------|----------|----------|
-| **1. Python Script** | 3D Model | Good | None (file) | No | High | Modeling pipeline, CAD import |
-| **2. Blender GIS** | 3D Render | Excellent | Full (Blender) | Yes | High | Presentation, visualization |
+| **1. Blender GIS** ⭐ | 3D Render | Excellent | Full (Blender) | Yes | High | Presentation, visualization |
+| **2. Python Script** | 3D Model | Good | None (file) | No | High | Modeling pipeline, CAD import |
 | **3. OpenStreetMap** | 2D Map | Good | Limited (pan/zoom) | Excellent | Very High | Footprint verification |
 | **4. Google Maps** | Satellite/3D | Very Good | Moderate | Good | High | Real-world reference |
 | **5. F4Map** | 3D Web | Good | Excellent | Excellent | High | Quick 3D preview, sharing |
@@ -226,14 +238,14 @@ curl -sL -X POST \
 
 ## Recommendations
 
-### Best Output: Approach 2 (Blender GIS)
+### Best Output: Approach 1 (Blender GIS) ⭐
 The Blender GIS approach produced the highest quality visualization with proper materials, lighting, and rendering capabilities. Recommended for:
 - Final presentations
 - Preservation documentation
 - Stakeholder reviews
 - Publication-quality images
 
-### Best for Development: Approach 1 (Python Script)
+### Best for Development: Approach 2 (Python Script)
 The Python script provides the most flexibility and can be:
 - Integrated into automated pipelines
 - Modified for different buildings
@@ -295,7 +307,7 @@ F4Map offers:
 
 ## Conclusion
 
-All five approaches successfully generated or visualized the B'nai Emunah Synagogue building in 3D or detailed 2D formats. The Blender GIS approach (#2) delivered the best visual output, while the Python script (#1) provides the most flexibility for integration into preservation workflows. The combination of these approaches provides comprehensive documentation suitable for architectural preservation, community engagement, and historical records.
+All five approaches successfully generated or visualized the B'nai Emunah Synagogue building in 3D or detailed 2D formats. The Blender GIS approach (#1) delivered the best visual output, while the Python script (#2) provides the most flexibility for integration into preservation workflows. The combination of these approaches provides comprehensive documentation suitable for architectural preservation, community engagement, and historical records.
 
 The variety of methods demonstrates the accessibility of geospatial data and 3D modeling tools for heritage conservation projects, enabling multiple stakeholders to engage with the building's digital representation in ways appropriate to their needs and technical capabilities.
 
