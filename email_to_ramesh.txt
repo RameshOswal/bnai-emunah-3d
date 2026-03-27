@@ -1,0 +1,18 @@
+Subject: B'nai Emunah 3D Modeling - Approach Recommendations
+
+Hi Ramesh,
+
+I wanted to share my thoughts on the different approaches we explored for the B'nai Emunah Synagogue 3D modeling project.
+
+Blender Approach:
+The Blender GIS method produced the most polished results. The great thing about this approach is that we have full control in Blender to edit and refine the model to match whatever requirements you have. We can adjust materials, lighting, camera angles, add details, and modify the geometry as needed. This gives us maximum flexibility for presentation-quality output.
+
+Python Script Approach:
+The Python script is also viable if we take a programmatic route. The key question here is: what specific criteria would make the final 3D output acceptable? If you can define exactly what changes are needed (e.g., roof angles, wall heights, specific architectural details, smoothing parameters, etc.), we can work on mutating the OBJ file or adding modifications to the script. This approach is great for automation and repeatability across multiple buildings.
+
+Reference:
+I've attached the Google Maps satellite image (output/googlemaps.png) which shows the actual building and can serve as our reference for validation and detailing.
+
+Let me know which direction you'd like to pursue, or if you have specific requirements for the final 3D model that we should target.
+
+Best regards
