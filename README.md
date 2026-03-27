@@ -1,5 +1,7 @@
 # B'nai Emunah Synagogue — 3D Massing Model
 
+<video src="output/3d-model-demo.mp4" autoplay loop muted playsinline width="100%"></video>
+
 ## Overview
 
 This project generates a 3D `.OBJ` massing model of Congregation B'nai Emunah (Tulsa, OK) from OpenStreetMap data, for use in a preservation project.
