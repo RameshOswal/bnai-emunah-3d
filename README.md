@@ -1,6 +1,6 @@
 # B'nai Emunah Synagogue — 3D Massing Model
 
-<video src="output/3d-model-demo.mp4" autoplay loop muted playsinline width="100%"></video>
+<video src="https://github.com/RameshOswal/bnai-emunah-3d/raw/main/output/3d-model-demo.mp4" autoplay loop muted playsinline width="100%"></video>
 
 ## Overview
 
